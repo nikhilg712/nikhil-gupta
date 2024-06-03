@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { handleRequest } = require('./controllers/requestController');
+const { handleRequest } = require('./controllers/apiController');
 
 const app = express();
 const PORT = 4000;

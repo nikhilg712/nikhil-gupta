@@ -111,3 +111,22 @@
   error: 'Request failed with status code 404',
   timestamp: '2024-06-03T17:10:54.827Z'
 }
+[2024-06-03T23:09:16.506] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-03T17:39:16.506Z'
+}
+[2024-06-03T23:09:28.771] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=2000',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:39:28.771Z'
+}
+[2024-06-03T23:09:34.672] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:39:34.672Z'
+}

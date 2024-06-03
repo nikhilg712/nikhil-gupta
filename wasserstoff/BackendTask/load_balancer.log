@@ -1,0 +1,113 @@
+[2024-06-03T22:08:39.405] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=REST&payloadSize=500&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-03T16:38:39.404Z'
+}
+[2024-06-03T22:08:44.523] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=GraphQL&payloadSize=500&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-03T16:38:44.523Z'
+}
+[2024-06-03T22:08:46.961] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=GraphQL&payloadSize=500&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-03T16:38:46.960Z'
+}
+[2024-06-03T22:08:49.672] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=gRPC&payloadSize=500&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/grpc',
+  timestamp: '2024-06-03T16:38:49.672Z'
+}
+[2024-06-03T22:18:38.618] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=REST&payloadSize=2000&queueType=priority',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-03T16:48:38.617Z'
+}
+[2024-06-03T22:18:43.860] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=REST&payloadSize=500&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-03T16:48:43.860Z'
+}
+[2024-06-03T22:18:53.602] [INFO] loadBalancer - {
+  method: 'OPTIONS',
+  url: '/?apiType=GraphQL&payloadSize=5000&queueType=fifo',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-03T16:48:53.602Z'
+}
+[2024-06-03T22:33:54.643] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-03T17:03:54.643Z'
+}
+[2024-06-03T22:34:28.359] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-03T17:04:28.359Z'
+}
+[2024-06-03T22:34:33.538] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-03T17:04:33.538Z'
+}
+[2024-06-03T22:34:57.605] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=graphql&payloadSize=1000',
+  error: 'Unsupported API type',
+  timestamp: '2024-06-03T17:04:57.605Z'
+}
+[2024-06-03T22:35:16.093] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=1000',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:05:16.093Z'
+}
+[2024-06-03T22:35:24.032] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:05:24.032Z'
+}
+[2024-06-03T22:35:46.379] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=gRPC&payloadSize=500',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:05:46.379Z'
+}
+[2024-06-03T22:35:52.297] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=grpc&payloadSize=500',
+  error: 'Unsupported API type',
+  timestamp: '2024-06-03T17:05:52.297Z'
+}
+[2024-06-03T22:40:30.483] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-03T17:10:30.482Z'
+}
+[2024-06-03T22:40:54.827] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=gRPC&payloadSize=500',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-03T17:10:54.827Z'
+}

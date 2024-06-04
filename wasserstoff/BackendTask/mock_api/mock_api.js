@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json());
+app.use(cors());
 
 app.get('/api/rest/fast', (req, res) => {
   res.json({ message: 'Fast response' });

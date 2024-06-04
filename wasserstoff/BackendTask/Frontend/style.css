@@ -1,14 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  select,
-  input,
-  button {
-    margin: 10px 0;
-    padding: 5px;
-  }
-  pre {
-    background: #f4f4f4;
-    padding: 10px;
-  }
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+select, input, button {
+  margin: 10px 0;
+  padding: 5px;
+}
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+}

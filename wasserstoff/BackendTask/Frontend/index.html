@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Load Balancer Test</title>
-    <link rel="stylesheet" href="style.css">
-    
-  </head>
-  <body>
-    <h1>Test Load Balancer</h1>
-    <label for="apiType">API Type:</label>
-    <select id="apiType">
-      <option value="REST">REST</option>
-      <option value="GraphQL">GraphQL</option>
-      <option value="gRPC">gRPC</option>
-    </select>
-    <br />
-    <label for="payloadSize">Payload Size:</label>
-    <input type="number" id="payloadSize" placeholder="Enter payload size" />
-    <br />
-    <button onclick="sendRequest()">Send Request</button>
-    <pre id="response"></pre>
-  </body>
-  <script src="app.js"></script>
-
-  </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Load Balancer Test</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <h1>Test Load Balancer</h1>
+  <label for="apiType">API Type:</label>
+  <select id="apiType">
+    <option value="REST">REST</option>
+    <option value="GraphQL">GraphQL</option>
+    <option value="gRPC">gRPC</option>
+  </select>
+  <br>
+  <label for="payloadSize">Payload Size:</label>
+  <input type="number" id="payloadSize" placeholder="Enter payload size">
+  <br>
+  <label for="queueType">Queue Type:</label>
+  <select id="queueType">
+    <option value="fifo">FIFO</option>
+    <option value="priority">Priority</option>
+    <option value="roundRobin">Round Robin</option>
+  </select>
+  <br>
+  <button onclick="sendRequest()">Send Request</button>
+  <pre id="response"></pre>
+</body>
+<script src="app.js"></script>
+</html>

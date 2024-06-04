@@ -410,3 +410,69 @@
   endpoint: 'http://localhost:3000/api/graphql',
   timestamp: '2024-06-04T04:06:01.921Z'
 }
+[2024-06-04T12:39:20.891] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T07:09:20.890Z'
+}
+[2024-06-04T12:39:26.020] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T07:09:26.020Z'
+}
+[2024-06-04T12:39:30.845] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T07:09:30.845Z'
+}
+[2024-06-04T12:39:31.748] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T07:09:31.748Z'
+}
+[2024-06-04T12:39:32.754] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T07:09:32.754Z'
+}
+[2024-06-04T12:39:35.380] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T07:09:35.380Z'
+}
+[2024-06-04T12:39:40.967] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T07:09:40.967Z'
+}
+[2024-06-04T12:39:43.882] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-04T07:09:43.882Z'
+}
+[2024-06-04T12:40:24.262] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T07:10:24.262Z'
+}
+[2024-06-04T12:40:30.775] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-04T07:10:30.775Z'
+}

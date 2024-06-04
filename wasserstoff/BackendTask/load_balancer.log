@@ -130,3 +130,283 @@
   error: 'Request failed with status code 404',
   timestamp: '2024-06-03T17:39:34.672Z'
 }
+[2024-06-04T08:45:09.716] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-04T03:15:09.716Z'
+}
+[2024-06-04T08:47:46.565] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Request failed with status code 404',
+  timestamp: '2024-06-04T03:17:46.565Z'
+}
+[2024-06-04T08:50:28.950] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=grpc&payloadSize=500',
+  error: 'Unsupported API type',
+  timestamp: '2024-06-04T03:20:28.950Z'
+}
+[2024-06-04T08:50:38.352] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T03:20:38.352Z'
+}
+[2024-06-04T08:51:14.582] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:21:14.582Z'
+}
+[2024-06-04T08:54:57.790] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:24:57.790Z'
+}
+[2024-06-04T08:55:26.788] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 400',
+  timestamp: '2024-06-04T03:25:26.788Z'
+}
+[2024-06-04T09:06:45.511] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 408',
+  timestamp: '2024-06-04T03:36:45.510Z'
+}
+[2024-06-04T09:14:05.323] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=gRPC&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 408',
+  timestamp: '2024-06-04T03:44:05.322Z'
+}
+[2024-06-04T09:14:50.309] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:44:50.309Z'
+}
+[2024-06-04T09:15:35.348] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 408',
+  timestamp: '2024-06-04T03:45:35.348Z'
+}
+[2024-06-04T09:16:02.391] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:46:02.391Z'
+}
+[2024-06-04T09:17:08.252] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:47:08.252Z'
+}
+[2024-06-04T09:20:44.929] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:50:44.929Z'
+}
+[2024-06-04T09:22:16.980] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T03:52:16.980Z'
+}
+[2024-06-04T09:22:29.310] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:52:29.310Z'
+}
+[2024-06-04T09:24:31.941] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:54:31.941Z'
+}
+[2024-06-04T09:24:33.832] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:54:33.832Z'
+}
+[2024-06-04T09:24:36.229] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=gRPC&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/grpc',
+  timestamp: '2024-06-04T03:54:36.229Z'
+}
+[2024-06-04T09:24:37.868] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:54:37.868Z'
+}
+[2024-06-04T09:24:40.153] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:54:40.153Z'
+}
+[2024-06-04T09:25:01.844] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:55:01.843Z'
+}
+[2024-06-04T09:25:03.809] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:55:03.809Z'
+}
+[2024-06-04T09:25:06.717] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=gRPC&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/grpc',
+  timestamp: '2024-06-04T03:55:06.717Z'
+}
+[2024-06-04T09:25:07.779] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:55:07.779Z'
+}
+[2024-06-04T09:25:08.510] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:55:08.510Z'
+}
+[2024-06-04T09:26:35.577] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 408',
+  timestamp: '2024-06-04T03:56:35.577Z'
+}
+[2024-06-04T09:27:35.580] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 408',
+  timestamp: '2024-06-04T03:57:35.580Z'
+}
+[2024-06-04T09:28:03.558] [ERROR] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 404',
+  timestamp: '2024-06-04T03:58:03.558Z'
+}
+[2024-06-04T09:28:07.415] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T03:58:07.415Z'
+}
+[2024-06-04T09:29:24.206] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T03:59:24.206Z'
+}
+[2024-06-04T09:33:04.479] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T04:03:04.478Z'
+}
+[2024-06-04T09:33:10.949] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T04:03:10.949Z'
+}
+[2024-06-04T09:33:20.384] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T04:03:20.384Z'
+}
+[2024-06-04T09:33:27.315] [ERROR] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  error: 'Failed to fetch from endpoint: Request failed with status code 304',
+  timestamp: '2024-06-04T04:03:27.315Z'
+}
+[2024-06-04T09:33:28.837] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=500',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/fast',
+  timestamp: '2024-06-04T04:03:28.837Z'
+}
+[2024-06-04T09:33:35.294] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-04T04:03:35.294Z'
+}
+[2024-06-04T09:34:02.594] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=2000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T04:04:02.594Z'
+}
+[2024-06-04T09:34:07.275] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T04:04:07.275Z'
+}
+[2024-06-04T09:34:08.873] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T04:04:08.873Z'
+}
+[2024-06-04T09:34:13.932] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=gRPC&payloadSize=1000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/grpc',
+  timestamp: '2024-06-04T04:04:13.932Z'
+}
+[2024-06-04T09:35:52.472] [INFO] loadBalancer - {
+  method: 'GET',
+  url: '/api/request?apiType=REST&payloadSize=5000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/rest/slow',
+  timestamp: '2024-06-04T04:05:52.472Z'
+}
+[2024-06-04T09:36:01.921] [INFO] loadBalancer - {
+  method: 'POST',
+  url: '/api/request?apiType=GraphQL&payloadSize=5000',
+  status: 200,
+  endpoint: 'http://localhost:3000/api/graphql',
+  timestamp: '2024-06-04T04:06:01.921Z'
+}

@@ -1,7 +1,8 @@
-const { routeRequest, forwardRequest, selectEndpointByCriteria, getRandomEndpoint } = require('../services/loadBalancerService');
+// requestController.js
+const { routeRequest, forwardRequest, selectEndpointByCriteria } = require('../services/loadBalancerService');
 const log4js = require('log4js');
 
-// Set up logging
+// Set up logging configuration
 log4js.configure({
   appenders: { loadBalancer: { type: 'file', filename: 'load_balancer.log' } },
   categories: { default: { appenders: ['loadBalancer'], level: 'info' } }
@@ -11,15 +12,9 @@ const logger = log4js.getLogger('loadBalancer');
 // Controller to handle incoming requests
 const handleRequest = async (req, res) => {
   const { apiType, payloadSize } = req.query;
-
   try {
-    // Route the request
     const endpoint = await routeRequest(apiType, payloadSize, selectEndpointByCriteria);
-
-    // Forward the request to the chosen endpoint
     const response = await forwardRequest(req, endpoint);
-
-    // Send the response back to the client
     res.status(response.status).json(response.data);
 
     // Log request details

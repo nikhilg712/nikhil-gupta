@@ -1,7 +1,15 @@
-// loadBalancerService.js
 const axios = require('axios');
+const { FIFOQueue, PriorityQueue, RoundRobinQueue } = require('./queueService');
 
-// Mock API endpoints with health status and load
+const queues = {
+  fifo: new FIFOQueue(),
+  priority: new PriorityQueue(),
+  roundRobin: new RoundRobinQueue()
+};
+
+queues.roundRobin.addQueue(); // Add initial queue for round-robin
+queues.roundRobin.addQueue(); // Add additional queues as needed
+
 const endpoints = {
   REST: [
     { url: 'http://localhost:3000/api/rest/fast', health: true, load: 5 },
@@ -11,18 +19,14 @@ const endpoints = {
   gRPC: [{ url: 'http://localhost:3000/api/grpc', health: true, load: 7 }]
 };
 
-// Custom criteria for selecting endpoints based on load
+// Custom criteria for selecting endpoints
 const selectEndpointByCriteria = (endpoints) => {
   const healthyEndpoints = endpoints.filter(endpoint => endpoint.health);
-  if (healthyEndpoints.length === 0) return endpoints[0].url;
+  if (healthyEndpoints.length === 0) {
+    return endpoints[0].url;
+  }
   healthyEndpoints.sort((a, b) => a.load - b.load);
   return healthyEndpoints[0].url;
-};
-
-// Randomized routing to simulate server load balancing
-const getRandomEndpoint = (endpoints) => {
-  const randomIndex = Math.floor(Math.random() * endpoints.length);
-  return endpoints[randomIndex].url;
 };
 
 // Routing logic based on criteria
@@ -32,12 +36,12 @@ const routeRequest = async (apiType, payloadSize, customCriteria) => {
     if (payloadSize && payloadSize > 1000) {
       endpoint = endpoints.REST[1].url;
     } else {
-      endpoint = customCriteria ? customCriteria(endpoints.REST) : getRandomEndpoint(endpoints.REST);
+      endpoint = customCriteria ? customCriteria(endpoints.REST) : endpoints.REST[0].url;
     }
   } else if (apiType === 'GraphQL') {
-    endpoint = customCriteria ? customCriteria(endpoints.GraphQL) : getRandomEndpoint(endpoints.GraphQL);
+    endpoint = customCriteria ? customCriteria(endpoints.GraphQL) : endpoints.GraphQL[0].url;
   } else if (apiType === 'gRPC') {
-    endpoint = customCriteria ? customCriteria(endpoints.gRPC) : getRandomEndpoint(endpoints.gRPC);
+    endpoint = customCriteria ? customCriteria(endpoints.gRPC) : endpoints.gRPC[0].url;
   } else {
     throw new Error('Unsupported API type');
   }
@@ -46,17 +50,22 @@ const routeRequest = async (apiType, payloadSize, customCriteria) => {
 
 // Function to forward requests to the chosen endpoint
 const forwardRequest = async (req, endpoint) => {
-  try {
-    const response = await axios({
-      method: req.method,
-      url: endpoint,
-      headers: req.headers,
-      data: req.body
-    });
-    return response;
-  } catch (error) {
-    throw new Error(`Failed to fetch from endpoint: ${error.message}`);
-  }
+  return await axios({
+    method: req.method,
+    url: endpoint,
+    data: req.body
+  });
 };
 
-module.exports = { routeRequest, forwardRequest, selectEndpointByCriteria, getRandomEndpoint };
+const enqueueRequest = (queueType, request) => {
+  if (queueType === 'priority') {
+    request.priority = request.payloadSize; // Assuming payload size determines priority
+  }
+  queues[queueType].enqueue(request);
+};
+
+const dequeueRequest = (queueType) => {
+  return queues[queueType].dequeue();
+};
+
+module.exports = { routeRequest, forwardRequest, selectEndpointByCriteria, enqueueRequest, dequeueRequest, queues };
